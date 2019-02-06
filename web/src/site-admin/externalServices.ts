@@ -1,6 +1,7 @@
 import awsCodeCommitSchemaJSON from '../../../schema/awsCodeCommit.schema.json'
 import bitbucketServerSchemaJSON from '../../../schema/bitbucketServer.schema.json'
 import githubSchemaJSON from '../../../schema/github.schema.json'
+import gitlabSchemaJSON from '../../../schema/gitlab.schema.json'
 import gitoliteSchemaJSON from '../../../schema/gitolite.schema.json'
 import otherExternalServiceSchemaJSON from '../../../schema/otherExternalService.schema.json'
 import siteSchemaJSON from '../../../schema/site.schema.json'
@@ -76,8 +77,7 @@ export const ALL_EXTERNAL_SERVICES: ExternalServiceMetadata[] = [
     GITHUB_EXTERNAL_SERVICE,
     {
         kind: GQL.ExternalServiceKind.GITLAB,
-        jsonSchemaId: 'site.schema.json#definitions/GitLabConnection',
-        jsonSchema: siteSchemaJSON,
+        jsonSchema: gitlabSchemaJSON,
         displayName: 'GitLab',
         defaultConfig: `{
   // Use Ctrl+Space for completion, and hover over JSON properties for documentation.
