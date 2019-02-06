@@ -4,16 +4,12 @@ import githubSchemaJSON from '../../../schema/github.schema.json'
 import gitlabSchemaJSON from '../../../schema/gitlab.schema.json'
 import gitoliteSchemaJSON from '../../../schema/gitolite.schema.json'
 import otherExternalServiceSchemaJSON from '../../../schema/otherExternalService.schema.json'
-import siteSchemaJSON from '../../../schema/site.schema.json'
+import phabricatorSchemaJSON from '../../../schema/phabricator.schema.json'
 import * as GQL from '../../../shared/src/graphql/schema'
 
 export interface ExternalServiceMetadata {
     kind: GQL.ExternalServiceKind
     jsonSchema: { $id: string }
-
-    /** @default ExternalServiceMetadata#jsonSchema#$id */
-    jsonSchemaId?: string
-
     displayName: string
     defaultConfig: string
 }
@@ -106,8 +102,7 @@ export const ALL_EXTERNAL_SERVICES: ExternalServiceMetadata[] = [
     },
     {
         kind: GQL.ExternalServiceKind.PHABRICATOR,
-        jsonSchemaId: 'site.schema.json#definitions/PhabricatorConnection',
-        jsonSchema: siteSchemaJSON,
+        jsonSchema: phabricatorSchemaJSON,
         displayName: 'Phabricator',
         defaultConfig: `{
   // Use Ctrl+Space for completion, and hover over JSON properties for documentation.
