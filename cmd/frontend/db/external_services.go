@@ -31,7 +31,7 @@ type externalServices struct{}
 // external services.
 var ExternalServiceKinds = map[string]ExternalServiceKind{
 	"AWSCODECOMMIT":   {CodeHost: true, JSONSchema: schema.AWSCodeCommitSchemaJSON},
-	"BITBUCKETSERVER": {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/BitbucketServerConnection"},
+	"BITBUCKETSERVER": {CodeHost: true, JSONSchema: schema.BitbucketServerSchemaJSON},
 	"GITHUB":          {CodeHost: true, JSONSchema: schema.GitHubSchemaJSON},
 	"GITLAB":          {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/GitLabConnection"},
 	"GITOLITE":        {CodeHost: true, JSONSchema: schema.GitoliteSchemaJSON},
