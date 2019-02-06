@@ -253,6 +253,8 @@ type Phabricator struct {
 	CallsignCommand string `json:"callsignCommand"`
 	Url             string `json:"url"`
 }
+
+// PhabricatorConnection description: Configuration for a connection to Phabricator.
 type PhabricatorConnection struct {
 	Repos []*Repos `json:"repos,omitempty"`
 	Token string   `json:"token,omitempty"`

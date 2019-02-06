@@ -236,43 +236,6 @@ const SiteSchemaJSON = `{
     }
   },
   "definitions": {
-    "PhabricatorConnection": {
-      "type": "object",
-      "additionalProperties": false,
-      "anyOf": [{ "required": ["token"] }, { "required": ["repos"] }],
-      "properties": {
-        "url": {
-          "description": "URL of a Phabricator instance, such as https://phabricator.example.com",
-          "type": "string",
-          "examples": ["https://phabricator.example.com"]
-        },
-        "token": {
-          "description": "API token for the Phabricator instance.",
-          "type": "string",
-          "minLength": 1
-        },
-        "repos": {
-          "description": "The list of repositories available on Phabricator.",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": ["path", "callsign"],
-            "properties": {
-              "path": {
-                "description": "Display path for the url e.g. gitolite/my/repo",
-                "type": "string"
-              },
-              "callsign": {
-                "description": "The unique Phabricator identifier for the repository, like 'MUX'.",
-                "type": "string"
-              }
-            }
-          }
-        }
-      }
-    },
     "CloneURLToRepositoryName": {
       "description": "Describes a mapping from clone URL to repository name. The ` + "`" + `from` + "`" + ` field contains a regular expression with named capturing groups. The ` + "`" + `to` + "`" + ` field contains a template string that references capturing group names. For instance, if ` + "`" + `from` + "`" + ` is \"^../(?P<name>\\w+)$\" and ` + "`" + `to` + "`" + ` is \"github.com/user/{name}\", the clone URL \"../myRepository\" would be mapped to the repository name \"github.com/user/myRepository\".",
       "type": "object",
