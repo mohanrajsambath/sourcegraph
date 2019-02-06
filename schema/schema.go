@@ -8,6 +8,7 @@ import (
 	"fmt"
 )
 
+// AWSCodeCommitConnection description: Configuration for a connection to AWS CodeCommit.
 type AWSCodeCommitConnection struct {
 	AccessKeyID                 string `json:"accessKeyID"`
 	InitialRepositoryEnablement bool   `json:"initialRepositoryEnablement,omitempty"`
