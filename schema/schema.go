@@ -192,6 +192,8 @@ type GitLabConnection struct {
 	Token                       string               `json:"token"`
 	Url                         string               `json:"url"`
 }
+
+// GitoliteConnection description: Configuration for a connection to Gitolite.
 type GitoliteConnection struct {
 	Blacklist                  string       `json:"blacklist,omitempty"`
 	Host                       string       `json:"host"`

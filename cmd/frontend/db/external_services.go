@@ -34,7 +34,7 @@ var ExternalServiceKinds = map[string]ExternalServiceKind{
 	"BITBUCKETSERVER": {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/BitbucketServerConnection"},
 	"GITHUB":          {CodeHost: true, JSONSchema: schema.GitHubSchemaJSON},
 	"GITLAB":          {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/GitLabConnection"},
-	"GITOLITE":        {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/GitoliteConnection"},
+	"GITOLITE":        {CodeHost: true, JSONSchema: schema.GitoliteSchemaJSON},
 	"PHABRICATOR":     {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/PhabricatorConnection"},
 	"OTHER":           {CodeHost: true, JSONSchema: schema.OtherExternalServiceSchemaJSON},
 }
