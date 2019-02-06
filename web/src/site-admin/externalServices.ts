@@ -1,4 +1,5 @@
 import githubSchemaJSON from '../../../schema/github.schema.json'
+import gitoliteSchemaJSON from '../../../schema/gitolite.schema.json'
 import otherExternalServiceSchemaJSON from '../../../schema/otherExternalService.schema.json'
 import siteSchemaJSON from '../../../schema/site.schema.json'
 import * as GQL from '../../../shared/src/graphql/schema'
@@ -92,8 +93,7 @@ export const ALL_EXTERNAL_SERVICES: ExternalServiceMetadata[] = [
     },
     {
         kind: GQL.ExternalServiceKind.GITOLITE,
-        jsonSchemaId: 'site.schema.json#definitions/GitoliteConnection',
-        jsonSchema: siteSchemaJSON,
+        jsonSchema: gitoliteSchemaJSON,
         displayName: 'Gitolite',
         defaultConfig: `{
   // Use Ctrl+Space for completion, and hover over JSON properties for documentation.
