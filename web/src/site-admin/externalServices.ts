@@ -1,4 +1,5 @@
 import githubSchemaJSON from '../../../schema/github.schema.json'
+import otherExternalServiceSchemaJSON from '../../../schema/otherExternalService.schema.json'
 import siteSchemaJSON from '../../../schema/site.schema.json'
 import * as GQL from '../../../shared/src/graphql/schema'
 
@@ -120,8 +121,7 @@ export const ALL_EXTERNAL_SERVICES: ExternalServiceMetadata[] = [
     },
     {
         kind: GQL.ExternalServiceKind.OTHER,
-        jsonSchemaId: 'site.schema.json#definitions/OtherExternalServiceConnection',
-        jsonSchema: siteSchemaJSON,
+        jsonSchema: otherExternalServiceSchemaJSON,
         displayName: 'Other',
         defaultConfig: `{
   // Use Ctrl+Space for completion, and hover over JSON properties for documentation.

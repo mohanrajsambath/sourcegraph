@@ -36,7 +36,7 @@ var ExternalServiceKinds = map[string]ExternalServiceKind{
 	"GITLAB":          {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/GitLabConnection"},
 	"GITOLITE":        {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/GitoliteConnection"},
 	"PHABRICATOR":     {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/PhabricatorConnection"},
-	"OTHER":           {CodeHost: true, JSONSchema: schema.SiteSchemaJSON, JSONSchemaID: "site.schema.json#/definitions/OtherExternalServiceConnection"},
+	"OTHER":           {CodeHost: true, JSONSchema: schema.OtherExternalServiceSchemaJSON},
 }
 
 // ExternalServiceKind describes a kind of external service.
