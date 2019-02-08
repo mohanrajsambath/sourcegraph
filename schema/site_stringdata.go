@@ -45,7 +45,8 @@ const SiteSchemaJSON = `{
           "default": "disabled"
         }
       },
-      "group": "Experimental"
+      "group": "Experimental",
+      "hide": true
     },
     "corsOrigin": {
       "description": "Value for the Access-Control-Allow-Origin header returned with all requests.",
@@ -90,12 +91,14 @@ const SiteSchemaJSON = `{
     "githubClientID": {
       "description": "Client ID for GitHub.",
       "type": "string",
-      "group": "Internal"
+      "group": "Internal",
+      "hide": true
     },
     "githubClientSecret": {
       "description": "Client secret for GitHub.",
       "type": "string",
-      "group": "Internal"
+      "group": "Internal",
+      "hide": true
     },
     "gitMaxConcurrentClones": {
       "description": "Maximum number of git clone processes that will be run concurrently to update repositories.",
@@ -234,6 +237,7 @@ const SiteSchemaJSON = `{
       "description": "The \"from\" address for emails sent by this server.",
       "type": "string",
       "format": "email",
+      "group": "Email",
       "default": "noreply@sourcegraph.com"
     },
     "extensions": {
@@ -257,7 +261,17 @@ const SiteSchemaJSON = `{
             "type": "string"
           }
         }
-      }
+      },
+      "default": {
+        "remoteRegistry": "https://sourcegraph.com/.api/registry"
+      },
+      "examples": [
+        {
+          "remoteRegistry": "https://sourcegraph.com/.api/registry",
+          "allowRemoteExtensions": ["sourcegraph/java"]
+        }
+      ],
+      "group": "Extensions"
     },
     "discussions": {
       "description": "Configures Sourcegraph code discussions.",
@@ -275,7 +289,8 @@ const SiteSchemaJSON = `{
           "default": []
         }
       },
-      "group": "Experimental"
+      "group": "Experimental",
+      "hide": true
     }
   }
 }
